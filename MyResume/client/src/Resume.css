@@ -1,0 +1,57 @@
+/* General Styles */
+.resume {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    max-width: 800px;
+    line-height: 1.6;
+    color: black;
+    background-color: rgba(189, 251, 4, 0.5);
+    padding: 20px;
+    text-align: left;
+  }
+  
+  /* Header and Contact */
+  .header {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .contact {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Section Titles */
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+  }
+  
+  /* Lists */
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .skills-list,
+  .experience-list,
+  .projects-list,
+  .certifications-list {
+    margin: 10px 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  /* Experience Details */
+  strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+  }  
