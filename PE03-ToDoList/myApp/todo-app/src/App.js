@@ -1,19 +1,20 @@
 import React, { useState } from "react";
 import ToDoList from "./ToDoList";
-import "./styles.css"; // Import styles
+import "./styles.css";
 
 const App = () => {
   const [tasks, setTasks] = useState([]);
   const [task, setTask] = useState("");
 
   const handleAddTask = () => {
-    if (!task.trim()) return; // Avoid empty tasks
-    setTasks([...tasks, task]);
+    if (!task.trim()) 
+        return;
+    setTasks((prevTasks) => [...prevTasks, task]);
     setTask("");
   };
 
   const handleDeleteTask = (index) => {
-    setTasks(tasks.filter((_, i) => i !== index));
+    setTasks((prevTasks) => prevTasks.filter((_, i) => i !== index));
   };
 
   return (
