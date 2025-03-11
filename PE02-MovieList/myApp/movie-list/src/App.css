@@ -1,90 +1,26 @@
-/* App.css */
-
-/* General styling for the app */
 .App {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
-  background-color: #f4f4f9;
-}
-
-h2 {
   text-align: center;
-  color: #333;
 }
 
-/* Styling for the genre filter dropdown */
 select {
-  display: block;
-  margin: 20px auto;
+  margin: 20px;
   padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
-  color: #333;
-  cursor: pointer;
-  width: 200px;
 }
 
-/* Styling for the movie list */
 ul {
   list-style-type: none;
   padding: 0;
-  margin: 0;
-  max-width: 800px;
-  margin: 20px auto;
 }
 
 li {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  margin-bottom: 15px;
-  padding: 15px;
+  background-color: #f4f4f4;
+  margin: 10px;
+  padding: 20px;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
 }
 
-/* Hover effect for movie items */
 li:hover {
-  background-color: #f0f0f0;
-}
-
-/* Styling for movie title */
-h3 {
-  font-size: 20px;
-  color: #333;
-  margin: 0;
-}
-
-/* Styling for genre and year text */
-p {
-  font-size: 16px;
-  color: #555;
-  margin: 5px 0;
-}
-
-/* Additional responsive styling */
-@media (max-width: 600px) {
-  .App {
-    padding: 10px;
-  }
-
-  select {
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  li {
-    padding: 12px;
-  }
-
-  h3 {
-    font-size: 18px;
-  }
-
-  p {
-    font-size: 14px;
-  }
+  background-color: #e2e2e2;
 }

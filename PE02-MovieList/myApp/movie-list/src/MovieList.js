@@ -1,38 +1,36 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const MovieList = () => {
-  const movieData = [
-    { title: "Avengers Endgame", genre: "Superhero", year: 2019 },
-    { title: "Aliens", genre: "Horror", year: 1989 },
+  const movies = [
+    { title: 'Avatar', genre: 'Sci-Fi', releaseYear: 2009 },
+    { title: 'Avengers', genre: 'Superhero', releaseYear: 2012 },
   ];
 
-  const genres = ["All", ...new Set(movieData.map(movie => movie.genre))];
-  const [selectedGenre, setSelectedGenre] = useState("All");
+  const [selectedGenre, setSelectedGenre] = useState('All Genres');
+  const genres = ['All Genres', ...new Set(movies.map(movie => movie.genre))];
 
-  const handleGenreChange = (e) => setSelectedGenre(e.target.value);
-
-  const filteredMovies = selectedGenre === "All"
-    ? movieData
-    : movieData.filter(movie => movie.genre === selectedGenre);
+  let filteredMovies;
+  if (selectedGenre === 'All Genres') {
+    filteredMovies = movies;
+  } else {
+    filteredMovies = movies.filter(movie => movie.genre === selectedGenre);
+  }
 
   return (
     <div>
-      <h2>Movies List</h2>
-
-      {/* Genre Filter */}
-      <select onChange={handleGenreChange} value={selectedGenre}>
+      <h1>Movie List</h1>
+      <select onChange={(e) => setSelectedGenre(e.target.value)}>
         {genres.map(genre => (
-          <option key={genre} value={genre}>{genre}</option>
+          <option key={genre} value={genre}>
+            {genre}
+          </option>
         ))}
       </select>
-
-      {/* Movie List */}
       <ul>
-        {filteredMovies.map(movie => (
-          <li key={movie.title} onClick={() => alert(`You clicked on: ${movie.title}`)}>
-            <h3>{movie.title}</h3>
-            <p>Genre: {movie.genre}</p>
-            <p>Year: {movie.year}</p>
+        {filteredMovies.map((movie, index) => (
+          <li key={index} onClick={() => alert(movie.title)}>
+            <h2>{movie.title}</h2>
+            <p>{movie.genre} - {movie.releaseYear}</p>
           </li>
         ))}
       </ul>
