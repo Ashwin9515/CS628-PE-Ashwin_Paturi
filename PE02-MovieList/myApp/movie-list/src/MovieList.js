@@ -10,10 +10,10 @@ const MovieList = () => {
   const genres = ['All Genres', ...new Set(movies.map(movie => movie.genre))];
 
   let filteredMovies;
-  if (selectedGenre === 'All Genres') {
+  if (selectedGenre == 'All Genres') {
     filteredMovies = movies;
   } else {
-    filteredMovies = movies.filter(movie => movie.genre === selectedGenre);
+    filteredMovies = movies.filter(movie => movie.genre == selectedGenre);
   }
 
   return (
